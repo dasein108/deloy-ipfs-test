@@ -1,12 +1,11 @@
 import React from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 import "../App.css";
 
 function ParamsPage() {
   const { id } = useParams();
-  const navigate = useNavigate();
 
   return (
     <div>
