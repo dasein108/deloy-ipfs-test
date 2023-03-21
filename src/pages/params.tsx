@@ -1,5 +1,6 @@
 import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import "../App.css";
 
@@ -10,7 +11,10 @@ function ParamsPage() {
   return (
     <div>
       <h1>This page with ID {id}</h1>
-      <button onClick={() => navigate(-1)}>go back</button>
+      <Link to="/simple">Go Simple page</Link>
+      <div>
+        <Link to="/">Go home</Link>
+      </div>
     </div>
   );
 }
