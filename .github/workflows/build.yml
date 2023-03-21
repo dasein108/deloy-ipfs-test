@@ -32,7 +32,7 @@ jobs:
           CHAIN_ID: "bostrom"
 
       - name: Deploy 🚀
-        uses: aquiladev/ipfs-action@@v0.3.1
+        uses: aquiladev/ipfs-action@v0.3.1
         with:
           path: ./build
           service: infura
