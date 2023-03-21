@@ -33,8 +33,6 @@ jobs:
 
       - name: Server-side render
         uses: brycedorn/react-snap-action@v1.0.2
-        root: .
-        output: ./build
 
       - name: Deploy 🚀
         uses: aquiladev/ipfs-action@master
