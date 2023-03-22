@@ -48,8 +48,8 @@ jobs:
         id: ipfs
         with:
           path_to_add: ./build
-          cluster_host: io.cybernode.ai 
+          cluster_host: io.cybernode.ai
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: echo /ipfs/${{ steps.ipfs.outputs.cid }}
-        run: echo ${{ steps.ipfs.outputs.url }}
+      - run: echo /ipfs/${{ steps.ipfs.outputs.cid }}
+      - run: echo ${{ steps.ipfs.outputs.url }}
