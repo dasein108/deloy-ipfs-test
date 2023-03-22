@@ -31,16 +31,25 @@ jobs:
           NODE_OPTIONS: "--max-old-space-size=8192"
           CHAIN_ID: "bostrom"
 
-      - name: Server-side render
-        uses: brycedorn/react-snap-action@v1.0.2
-        # with:
-        #   root: .
-        #   output: ./build
+      # - name: Server-side render
+      #   uses: brycedorn/react-snap-action@v1.0.2
+      # with:
+      #   root: .
+      #   output: ./build
 
       - name: Deploy 🚀
-        uses: aquiladev/ipfs-action@master
+        # uses: aquiladev/ipfs-action@master
+        # with:
+        #   path: ./build
+        #   service: infura
+        #   infuraProjectId: ${{ secrets.INFURA_PROJECT_ID }}
+        #   infuraProjectSecret: ${{ secrets.INFURA_PROJECT_SECRET }}
+        uses: dasein108/ipfs-github-action@latest
+        id: ipfs
         with:
-          path: ./build
-          service: infura
-          infuraProjectId: ${{ secrets.INFURA_PROJECT_ID }}
-          infuraProjectSecret: ${{ secrets.INFURA_PROJECT_SECRET }}
+          path_to_add: ./build
+          cluster_host: io.cybernode.ai 
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: echo /ipfs/${{ steps.ipfs.outputs.cid }}
+        run: echo ${{ steps.ipfs.outputs.url }}
