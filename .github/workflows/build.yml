@@ -48,7 +48,7 @@ jobs:
         id: ipfs
         with:
           path_to_add: ./build
-          cluster_host: /ip4/88.99.105.146/tcp/9096/p2p/12D3KooWGJvMBPGSQtLeXJgL11wmK67Tp2v69A1Q4rp5FjoSGBNd
+          cluster_host: /ip4/192.168.0.201/tcp/9094
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: echo /ipfs/${{ steps.ipfs.outputs.cid }}
