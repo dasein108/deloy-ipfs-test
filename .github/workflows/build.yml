@@ -44,8 +44,8 @@ jobs:
         #   service: infura
         #   infuraProjectId: ${{ secrets.INFURA_PROJECT_ID }}
         #   infuraProjectSecret: ${{ secrets.INFURA_PROJECT_SECRET }}
-        uses: dasein108/ipfs-github-action@v0.1.0
         id: ipfs
+        uses: dasein108/ipfs-github-action@v0.1.0
         with:
           path_to_add: ./build
           cluster_host: ${{ secrets.IPFS_CLUSTER }}
