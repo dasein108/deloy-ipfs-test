@@ -1,4 +1,4 @@
-(https://img.shields.io/github/actions/workflow/status/dasein108/deloy-ipfs-test/build.yml)
+[build](https://img.shields.io/github/actions/workflow/status/dasein108/deloy-ipfs-test/build.yml)
 
 
 # Getting Started with Create React App
