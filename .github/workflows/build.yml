@@ -14,11 +14,9 @@ jobs:
         node-version: [16.x.x]
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
       - name: test
         id: test
-        uses: actions/hello-world-docker-action@main
+        uses: dasein108/test-output:main
         with:
           who-to-greet: "Mona the Octocat"
 
@@ -28,6 +26,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
+
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
       - name: Install dependencies
         run: yarn install
