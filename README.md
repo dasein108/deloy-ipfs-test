@@ -1,3 +1,5 @@
+![example branch parameter](https://github.com/github/docs/actions/workflows/main.yml/badge.svg?branch=main)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
