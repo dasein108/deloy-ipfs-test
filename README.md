@@ -1,4 +1,4 @@
-![example branch parameter](https://github.com/github/docs/actions/workflows/main.yml/badge.svg?branch=main)
+![example branch parameter](https://github.com/github/docs/actions/workflows/build.yml/badge.svg?branch=main)
 ![GitHub CI](https://github.com/dwyl/auth_plug/actions/workflows/build.yml/badge.svg)
 
 
