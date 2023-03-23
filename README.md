@@ -1,5 +1,6 @@
 ![example branch parameter](https://github.com/github/docs/actions/workflows/main.yml/badge.svg?branch=main)
-![workflow](https://github.com/github/docs/actions/workflows/build.yml/badge.svg)
+![GitHub CI](https://github.com/dwyl/auth_plug/actions/workflows/build.yml/badge.svg)
+
 
 # Getting Started with Create React App
 
