@@ -11,7 +11,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.20.x]
+        node-version: [16.x.x]
 
     steps:
       - name: Checkout repository
@@ -45,11 +45,11 @@ jobs:
         #   infuraProjectId: ${{ secrets.INFURA_PROJECT_ID }}
         #   infuraProjectSecret: ${{ secrets.INFURA_PROJECT_SECRET }}
         id: ipfs
-        uses: dasein108/ipfs-github-action@v0.1.1
+        uses: dasein108/ipfs-github-action@v0.1.2
         with:
           path_to_add: ./build
           cluster_host: ${{ secrets.IPFS_CLUSTER }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      # - run: echo /ipfs/${{ steps.ipfs.outputs.cid }}
-      # - run: echo ${{ steps.ipfs.outputs.url }}
+      - run: echo /ipfs/${{ steps.ipfs.outputs.cid }}
+      - run: echo ${{ steps.ipfs.outputs.url }}
