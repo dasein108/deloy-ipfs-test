@@ -1,5 +1,4 @@
-![example branch parameter](https://github.com/github/docs/actions/workflows/build.yml/badge.svg?branch=main)
-![GitHub CI](https://github.com/dwyl/auth_plug/actions/workflows/build.yml/badge.svg)
+(https://img.shields.io/github/actions/workflow/status/dasein108/deloy-ipfs-test/build.yml)
 
 
 # Getting Started with Create React App
