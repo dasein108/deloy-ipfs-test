@@ -51,7 +51,7 @@ jobs:
       - name: Dynamic Badges
         uses: Schneegans/dynamic-badges-action@v1.6.0
         with:
-          auth: ${{ secrets.GITHUB_TOKEN }}
+          auth: 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
           gistID: 8f5ee5779ab1668d042bfad9f65b4c0f
           filename: deploy.json
           label: IPFS
