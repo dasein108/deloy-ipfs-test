@@ -60,4 +60,3 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: show urls
         run: echo /ipfs/${{ steps.ipfs.outputs.cid }}
-        run: echo ${{ steps.ipfs.outputs.url }}
