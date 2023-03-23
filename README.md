@@ -1,5 +1,4 @@
-![build](https://img.shields.io/github/actions/workflow/status/dasein108/deloy-ipfs-test/build.yml)
-
+[![build](https://github.com/dasein108/deloy-ipfs-test/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/dasein108/deloy-ipfs-test/actions/workflows/build.yml)
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
