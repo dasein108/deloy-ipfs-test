@@ -46,3 +46,14 @@ jobs:
           cluster_host: ${{ secrets.IPFS_CLUSTER }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: show urls
+        run: echo /ipfs/${{ steps.ipfs.outputs.cid }}
+      - name: Dynamic Badges
+        uses: Schneegans/dynamic-badges-action@v1.6.0
+        with:
+          auth: ${{ secrets.GITHUB_TOKEN }}
+          gistID: 8f5ee5779ab1668d042bfad9f65b4c0f
+          filename: deploy.json
+          label: IPFS
+          message: ${{ steps.ipfs.outputs.cid }}
+          color: orange
