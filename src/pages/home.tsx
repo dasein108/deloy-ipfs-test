@@ -9,6 +9,7 @@ function HomePage() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>Fuck Google!</p>
+        <p>Amen!</p>
         <Link to="/simple">Go to Simple Page</Link>
         <Link to="/params/777">Go to Page with params</Link>
       </header>

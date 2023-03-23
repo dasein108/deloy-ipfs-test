@@ -14,19 +14,6 @@ jobs:
         node-version: [16.x.x]
 
     steps:
-      # - name: test
-      #   id: test
-      #   uses: dasein108/test-output@main
-      #   with:
-      #     who-to-greet: "Mona the Octocat"
-
-      # - name: show test pipeline
-      #   run: echo time:${{ steps.test.outputs.time }}
-      # - name: Set up Node.js ${{ matrix.node-version }}
-      #   uses: actions/setup-node@v3
-      #   with:
-      #     node-version: ${{ matrix.node-version }}
-
       - name: Checkout repository
         uses: actions/checkout@v3
 
@@ -59,5 +46,3 @@ jobs:
           cluster_host: ${{ secrets.IPFS_CLUSTER }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: show urls
-        run: echo /ipfs/${{ steps.ipfs.outputs.cid }}
