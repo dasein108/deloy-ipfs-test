@@ -44,13 +44,13 @@ jobs:
         with:
           path_to_add: ./build
           cluster_host: ${{ secrets.IPFS_CLUSTER_HOST }}
-          ipfs_gateway: ${{ vars.INPUT_IPFS_GATEWAY }}
+          ipfs_gateway: ${{ vars.IPFS_GATEWAY }}
       - name: show urls
         run: echo /ipfs/${{ steps.ipfs.outputs.cid }}
 
       - name: send build result to telegram
         env:
-          CLEAN_MVN_REPO: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
         if: env.TELEGRAM_TOKEN != null
         uses: appleboy/telegram-action@master
         with:
