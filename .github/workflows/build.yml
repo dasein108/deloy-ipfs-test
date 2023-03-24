@@ -32,7 +32,7 @@ jobs:
       #   root: .
       #   output: ./build
 
-      - name: Deploy 🚀
+      - name: Deploy to IPFS 🚀
         # uses: aquiladev/ipfs-action@master
         # with:
         #   path: ./build
@@ -44,12 +44,13 @@ jobs:
         with:
           path_to_add: ./build
           cluster_host: ${{ secrets.IPFS_CLUSTER_HOST }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: show urls
         run: echo /ipfs/${{ steps.ipfs.outputs.cid }}
 
       - name: send build result to telegram
+        env:
+          CLEAN_MVN_REPO: ${{ secrets.TELEGRAM_TOKEN }}
+        if: env.TELEGRAM_TOKEN != null
         uses: appleboy/telegram-action@master
         with:
           to: ${{ secrets.TELEGRAM_TO }}
